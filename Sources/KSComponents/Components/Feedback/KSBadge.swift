@@ -376,4 +376,3 @@ public struct KSStatusBadge: View {
         .clipShape(Capsule())
     }
 }
-
