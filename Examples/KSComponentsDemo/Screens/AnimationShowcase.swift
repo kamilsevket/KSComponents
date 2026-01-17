@@ -91,7 +91,6 @@ struct AnimationShowcase: View {
                 ShowcaseSection("Typing Indicator", description: "Animated typing dots") {
                     HStack(spacing: KS.Spacing.lg) {
                         KSTypingIndicator()
-                        KSTypingIndicator(color: KS.Colors.secondary)
                     }
                 }
 

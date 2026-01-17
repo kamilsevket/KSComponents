@@ -112,7 +112,7 @@ struct FormShowcase: View {
 
                 ShowcaseSection("Date Picker", description: "Date selection control") {
                     KSDatePicker(
-                        selection: $selectedDate,
+                        date: $selectedDate,
                         label: "Select Date"
                     )
                 }
