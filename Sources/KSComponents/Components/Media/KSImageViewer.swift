@@ -2,6 +2,7 @@ import SwiftUI
 
 // MARK: - KSImageViewer
 
+#if os(iOS)
 public struct KSImageViewer: View {
     @Binding var isPresented: Bool
     let images: [URL]
@@ -168,3 +169,4 @@ public extension View {
     }
     return PreviewWrapper()
 }
+#endif
