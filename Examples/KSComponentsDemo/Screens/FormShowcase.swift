@@ -7,7 +7,7 @@ struct FormShowcase: View {
     @State private var sliderValue: Double = 0.5
     @State private var stepperValue = 5
     @State private var selectedOption = "Option 1"
-    @State private var selectedSegment = 0
+    @State private var selectedSegment = "daily"
     @State private var selectedDate = Date()
 
     var body: some View {
@@ -63,11 +63,15 @@ struct FormShowcase: View {
                 ShowcaseSection("Segmented Control", description: "Horizontal segment picker") {
                     VStack(spacing: KS.Spacing.md) {
                         KSSegmentedControl(
-                            options: ["Daily", "Weekly", "Monthly"],
-                            selectedIndex: $selectedSegment
+                            selection: $selectedSegment,
+                            options: [
+                                (value: "daily", label: "Daily"),
+                                (value: "weekly", label: "Weekly"),
+                                (value: "monthly", label: "Monthly")
+                            ]
                         )
 
-                        Text("Selected: \(["Daily", "Weekly", "Monthly"][selectedSegment])")
+                        Text("Selected: \(selectedSegment)")
                             .font(KS.Typography.bodySmall)
                             .foregroundStyle(KS.Colors.textSecondary)
                     }

@@ -85,7 +85,7 @@ struct ListShowcase: View {
                             Text("Item 2")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.vertical, KS.Spacing.sm)
-                            KSDivider(style: .inset)
+                            KSDivider(inset: 16)
                             Text("Item 3")
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.vertical, KS.Spacing.sm)
