@@ -10,3 +10,8 @@ public enum KS {
     public enum Radius { }
     public enum Animation { }
 }
+
+// Re-export navigation component type aliases
+public typealias KSTabBarItem = KSTabBar.TabItem
+public typealias KSNavButton = KSNavBar.NavButton
+public typealias KSBottomSheetDetent = KSBottomSheet<EmptyView>.Detent
