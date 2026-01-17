@@ -87,10 +87,10 @@ struct FormShowcase: View {
 
                         KSSlider(
                             value: $sliderValue,
-                            range: 0...100,
-                            label: "Percentage",
+                            in: 0...1,
+                            label: "Opacity",
                             showValue: true,
-                            valueFormat: "%.0f%%"
+                            valueFormat: "%.2f"
                         )
                     }
                 }
@@ -104,7 +104,7 @@ struct FormShowcase: View {
 
                         KSStepper(
                             value: $stepperValue,
-                            range: 0...10,
+                            in: 0...10,
                             label: "Limited (0-10)"
                         )
                     }

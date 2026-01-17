@@ -66,9 +66,9 @@ struct StateShowcase: View {
                             }
                         }
 
-                        if showOfflineBar {
-                            KSOfflineBar()
-                        }
+                        KSOfflineBar(isOffline: showOfflineBar, retryAction: {
+                            // Retry action
+                        })
                     }
                 }
             }

@@ -123,17 +123,17 @@ struct AnimationShowcase: View {
                                 .clipShape(RoundedRectangle(cornerRadius: KS.Radius.md))
                                 .ksFadeIn()
 
-                            Text("Scale In")
+                            Text("Slide In (Bottom)")
                                 .padding()
                                 .background(KS.Colors.secondary.opacity(0.2))
                                 .clipShape(RoundedRectangle(cornerRadius: KS.Radius.md))
-                                .ksScaleIn()
+                                .ksSlideIn(from: .bottom, delay: 0.1)
 
-                            Text("Slide In")
+                            Text("Slide In (Leading)")
                                 .padding()
                                 .background(KS.Colors.accent.opacity(0.2))
                                 .clipShape(RoundedRectangle(cornerRadius: KS.Radius.md))
-                                .ksSlideIn(from: .bottom)
+                                .ksSlideIn(from: .leading, delay: 0.2)
                         }
                     }
                 }

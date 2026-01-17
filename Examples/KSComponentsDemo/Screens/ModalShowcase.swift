@@ -92,10 +92,11 @@ struct ModalShowcase: View {
                     isPresented: $showConfirmation,
                     title: "Confirm Action",
                     message: "Are you sure you want to proceed with this action?",
-                    confirmTitle: "Confirm",
-                    cancelTitle: "Cancel",
-                    confirmAction: { },
-                    cancelAction: { }
+                    actions: [
+                        .init(title: "Confirm", action: { }),
+                        .init(title: "Delete", isDestructive: true, action: { })
+                    ],
+                    cancelTitle: "Cancel"
                 )
             }
         }

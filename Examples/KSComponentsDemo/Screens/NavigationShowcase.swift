@@ -35,22 +35,18 @@ struct NavigationShowcase: View {
                     VStack(spacing: KS.Spacing.md) {
                         KSNavBar(
                             title: "Settings",
-                            leadingIcon: "chevron.left",
-                            leadingAction: { }
+                            leadingButton: .init(icon: "chevron.left") { }
                         )
 
                         KSNavBar(
                             title: "Profile",
-                            leadingIcon: "chevron.left",
-                            leadingAction: { },
-                            trailingIcon: "gear",
-                            trailingAction: { }
+                            leadingButton: .init(icon: "chevron.left") { },
+                            trailingButtons: [.init(icon: "gearshape") { }]
                         )
 
                         KSNavBar(
                             title: "Messages",
-                            trailingIcon: "plus",
-                            trailingAction: { }
+                            trailingButtons: [.init(icon: "plus") { }]
                         )
                     }
                 }
