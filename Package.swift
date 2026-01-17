@@ -21,6 +21,11 @@ let package = Package(
                 .process("Resources")
             ]
         ),
+        .executableTarget(
+            name: "KSComponentsDemo",
+            dependencies: ["KSComponents"],
+            path: "Examples/KSComponentsDemo"
+        ),
         .testTarget(
             name: "KSComponentsTests",
             dependencies: ["KSComponents"]
