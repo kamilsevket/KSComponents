@@ -1,13 +1,17 @@
 import SwiftUI
 
+// MARK: - Card Style
+
+public enum KSCardStyle {
+    case flat
+    case elevated
+    case outlined
+}
+
 // MARK: - KSCard
 
 public struct KSCard<Content: View>: View {
-    public enum Style {
-        case flat
-        case elevated
-        case outlined
-    }
+    public typealias Style = KSCardStyle
 
     let style: Style
     let padding: CGFloat
@@ -37,7 +41,7 @@ public struct KSCard<Content: View>: View {
 }
 
 struct CardShadowModifier: ViewModifier {
-    let style: KSCard<EmptyView>.Style
+    let style: KSCardStyle
 
     func body(content: Content) -> some View {
         switch style {
@@ -278,16 +282,19 @@ public struct KSListCard: View {
 }
 
 #Preview("Interactive Card") {
-    KSInteractiveCard(action: { print("Tapped") }) {
-        VStack(alignment: .leading, spacing: 8) {
-            Text("Interactive Card")
-                .font(KS.Typography.titleMedium)
-            Text("Tap me to see the animation")
-                .font(KS.Typography.bodySmall)
-                .foregroundStyle(KS.Colors.textSecondary)
+    KSInteractiveCard(
+        action: { print("Tapped") },
+        content: {
+            VStack(alignment: .leading, spacing: 8) {
+                Text("Interactive Card")
+                    .font(KS.Typography.titleMedium)
+                Text("Tap me to see the animation")
+                    .font(KS.Typography.bodySmall)
+                    .foregroundStyle(KS.Colors.textSecondary)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .frame(maxWidth: .infinity, alignment: .leading)
-    }
+    )
     .padding()
 }
 

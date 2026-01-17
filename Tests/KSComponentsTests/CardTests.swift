@@ -5,7 +5,7 @@ final class CardTests: XCTestCase {
     // MARK: - KSCard Style Tests
 
     func testCardStyles() {
-        let styles: [KSCard<EmptyView>.Style] = [.flat, .elevated, .outlined]
+        let styles: [KSCardStyle] = [.flat, .elevated, .outlined]
         XCTAssertEqual(styles.count, 3)
     }
 
