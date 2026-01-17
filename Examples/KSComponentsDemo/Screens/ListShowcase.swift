@@ -57,7 +57,7 @@ struct ListShowcase: View {
 
                 ShowcaseSection("Section Header", description: "Group rows with headers") {
                     VStack(spacing: 0) {
-                        KSSectionHeader(title: "Account")
+                        KSSectionHeader("Account")
 
                         KSRow(icon: "person.fill", title: "Profile")
 
@@ -65,7 +65,7 @@ struct ListShowcase: View {
 
                         KSRow(icon: "lock.fill", title: "Security")
 
-                        KSSectionHeader(title: "Preferences", action: ("See All", { }))
+                        KSSectionHeader("Preferences", action: { }, actionTitle: "See All")
 
                         KSRow(icon: "bell.fill", title: "Notifications")
 

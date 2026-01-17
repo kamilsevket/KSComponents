@@ -51,8 +51,12 @@ struct FormShowcase: View {
 
                 ShowcaseSection("Radio Group", description: "Single selection from options") {
                     KSRadioGroup(
-                        options: ["Option 1", "Option 2", "Option 3"],
-                        selectedOption: $selectedOption
+                        selection: $selectedOption,
+                        options: [
+                            (value: "Option 1", label: "Option 1"),
+                            (value: "Option 2", label: "Option 2"),
+                            (value: "Option 3", label: "Option 3")
+                        ]
                     )
                 }
 

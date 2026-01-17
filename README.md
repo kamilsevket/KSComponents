@@ -329,7 +329,10 @@ KSToggle(isOn: $isOn, label: "Dark Mode", description: "Enable dark theme")
 KSCheckbox(isChecked: $agreed, label: "I agree to terms")
 
 // Radio group
-KSRadioGroup(options: ["Option 1", "Option 2"], selectedOption: $selected)
+KSRadioGroup(
+    selection: $selected,
+    options: [(value: "opt1", label: "Option 1"), (value: "opt2", label: "Option 2")]
+)
 
 // Slider
 KSSlider(value: $volume, label: "Volume", showValue: true)
