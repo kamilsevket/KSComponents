@@ -1,28 +1,32 @@
 import SwiftUI
 
 public extension KS.Typography {
-    // Display
-    static let displayLarge = Font.system(size: 57, weight: .regular)
-    static let displayMedium = Font.system(size: 45, weight: .regular)
-    static let displaySmall = Font.system(size: 36, weight: .regular)
+    // MARK: - Display
+    static let displayLarge = Font.system(size: 57, weight: .bold, design: .rounded)
+    static let displayMedium = Font.system(size: 45, weight: .bold, design: .rounded)
+    static let displaySmall = Font.system(size: 36, weight: .bold, design: .rounded)
 
-    // Headline
-    static let headlineLarge = Font.system(size: 32, weight: .semibold)
-    static let headlineMedium = Font.system(size: 28, weight: .semibold)
-    static let headlineSmall = Font.system(size: 24, weight: .semibold)
+    // MARK: - Headline
+    static let headlineLarge = Font.system(size: 32, weight: .semibold, design: .rounded)
+    static let headlineMedium = Font.system(size: 28, weight: .semibold, design: .rounded)
+    static let headlineSmall = Font.system(size: 24, weight: .semibold, design: .rounded)
 
-    // Title
-    static let titleLarge = Font.system(size: 22, weight: .medium)
-    static let titleMedium = Font.system(size: 16, weight: .medium)
-    static let titleSmall = Font.system(size: 14, weight: .medium)
+    // MARK: - Title
+    static let titleLarge = Font.system(size: 22, weight: .medium, design: .rounded)
+    static let titleMedium = Font.system(size: 18, weight: .medium, design: .rounded)
+    static let titleSmall = Font.system(size: 14, weight: .medium, design: .rounded)
 
-    // Body
-    static let bodyLarge = Font.system(size: 16, weight: .regular)
-    static let bodyMedium = Font.system(size: 14, weight: .regular)
-    static let bodySmall = Font.system(size: 12, weight: .regular)
+    // MARK: - Body
+    static let bodyLarge = Font.system(size: 16, weight: .regular, design: .default)
+    static let bodyMedium = Font.system(size: 14, weight: .regular, design: .default)
+    static let bodySmall = Font.system(size: 12, weight: .regular, design: .default)
 
-    // Label
-    static let labelLarge = Font.system(size: 14, weight: .medium)
-    static let labelMedium = Font.system(size: 12, weight: .medium)
-    static let labelSmall = Font.system(size: 11, weight: .medium)
+    // MARK: - Label
+    static let labelLarge = Font.system(size: 14, weight: .medium, design: .default)
+    static let labelMedium = Font.system(size: 12, weight: .medium, design: .default)
+    static let labelSmall = Font.system(size: 11, weight: .medium, design: .default)
+
+    // MARK: - Caption
+    static let caption = Font.system(size: 12, weight: .regular, design: .default)
+    static let captionBold = Font.system(size: 12, weight: .semibold, design: .default)
 }
