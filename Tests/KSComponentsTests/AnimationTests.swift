@@ -12,7 +12,29 @@ final class AnimationTests: XCTestCase {
         _ = KS.Animation.smooth
         _ = KS.Animation.snappy
         _ = KS.Animation.gentle
+        _ = KS.Animation.springDefault
+        _ = KS.Animation.springBouncy
+        _ = KS.Animation.springStiff
         XCTAssertTrue(true, "All spring presets should be accessible")
+    }
+
+    // MARK: - Duration Presets Tests
+
+    func testDurationPresets() {
+        // Verify duration constants exist
+        XCTAssertEqual(KS.Animation.durationFast, 0.15)
+        XCTAssertEqual(KS.Animation.durationNormal, 0.25)
+        XCTAssertEqual(KS.Animation.durationSlow, 0.4)
+    }
+
+    // MARK: - Animation Presets Tests
+
+    func testAnimationPresets() {
+        // Verify animation presets exist
+        _ = KS.Animation.defaultAnimation
+        _ = KS.Animation.fastAnimation
+        _ = KS.Animation.slowAnimation
+        XCTAssertTrue(true, "All animation presets should be accessible")
     }
 
     // MARK: - Easing Presets Tests
@@ -99,5 +121,15 @@ final class AnimationTests: XCTestCase {
         // Verify color definitions exist
         _ = KS.Colors.textTertiary
         XCTAssertTrue(true, "Color definitions should be accessible")
+    }
+
+    // MARK: - KS Animation View Modifier Tests
+
+    func testKsAnimationViewModifier() {
+        // Verify ksAnimation modifier can be applied to a view
+        let viewDefault = Text("Test").ksAnimation()
+        let viewCustom = Text("Test").ksAnimation(KS.Animation.bouncy)
+        XCTAssertNotNil(viewDefault, "ksAnimation modifier should work with default animation")
+        XCTAssertNotNil(viewCustom, "ksAnimation modifier should work with custom animation")
     }
 }

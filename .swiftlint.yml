@@ -1,0 +1,31 @@
+disabled_rules:
+  - trailing_whitespace
+  - line_length
+  - todo
+  - inclusive_language
+
+opt_in_rules:
+  - empty_count
+
+included:
+  - Sources
+
+excluded:
+  - Tests
+  - .build
+
+line_length:
+  warning: 120
+  error: 150
+
+type_name:
+  min_length: 2
+  max_length: 40
+
+identifier_name:
+  min_length: 1
+  max_length: 40
+  excluded:
+    - x
+    - y
+    - id
