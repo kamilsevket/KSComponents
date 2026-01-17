@@ -1,10 +1,10 @@
 disabled_rules:
   - trailing_whitespace
   - line_length
+  - todo
 
 opt_in_rules:
   - empty_count
-  - missing_docs
 
 included:
   - Sources
@@ -16,3 +16,7 @@ excluded:
 line_length:
   warning: 120
   error: 150
+
+type_name:
+  min_length: 2
+  max_length: 40
