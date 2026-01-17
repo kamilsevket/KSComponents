@@ -33,8 +33,8 @@ public struct KSThemeColors {
     public init(
         primary: Color = .blue,
         secondary: Color = .purple,
-        background: Color = Color(.systemBackground),
-        surface: Color = Color(.secondarySystemBackground),
+        background: Color = KS.Colors.background,
+        surface: Color = KS.Colors.surface,
         error: Color = .red,
         onPrimary: Color = .white,
         onSecondary: Color = .white,

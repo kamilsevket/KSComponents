@@ -46,12 +46,15 @@ public extension View {
         }
     }
 
-    /// Apply corner radius to specific corners
+    /// Apply corner radius to specific corners (iOS only)
+    #if os(iOS)
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners))
     }
+    #endif
 }
 
+#if os(iOS)
 // Helper shape for specific corner radius
 struct RoundedCorner: Shape {
     var radius: CGFloat = .infinity
@@ -66,3 +69,4 @@ struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
+#endif

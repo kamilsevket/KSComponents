@@ -7,5 +7,6 @@ public enum KS {
     public enum Typography { }
     public enum Spacing { }
     public enum Shadows { }
+    public enum Radius { }
     public enum Animation { }
 }
