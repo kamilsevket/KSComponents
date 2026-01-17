@@ -1,10 +1,21 @@
 import SwiftUI
 import KSComponents
 
+struct ListItem: Identifiable {
+    let id = UUID()
+    let name: String
+}
+
 struct AnimationShowcase: View {
     @State private var isAnimating = false
     @State private var showItem = true
-    @State private var items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"]
+    private let items = [
+        ListItem(name: "Item 1"),
+        ListItem(name: "Item 2"),
+        ListItem(name: "Item 3"),
+        ListItem(name: "Item 4"),
+        ListItem(name: "Item 5")
+    ]
 
     var body: some View {
         ScrollView {
@@ -103,9 +114,9 @@ struct AnimationShowcase: View {
                         }
 
                         if showItem {
-                            KSStaggeredList(items: items) { item in
+                            KSStaggeredList(items) { item in
                                 KSCard {
-                                    Text(item)
+                                    Text(item.name)
                                         .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                             }
