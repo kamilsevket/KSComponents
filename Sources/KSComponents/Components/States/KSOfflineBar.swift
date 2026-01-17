@@ -16,7 +16,9 @@ public struct KSOfflineBar: View {
 
     public var body: some View {
         if isOffline {
-            Button(action: { retryAction?() }) {
+            Button {
+                retryAction?()
+            } label: {
                 HStack(spacing: KS.Spacing.sm) {
                     Image(systemName: "wifi.slash")
                         .font(.caption)
